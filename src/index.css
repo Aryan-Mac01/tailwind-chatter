@@ -90,7 +90,7 @@
 /* Custom styles for the chat application */
 @layer components {
   .sidebar-icon {
-    @apply h-6 w-6 text-sidebar-foreground transition-colors duration-200;
+    @apply h-5 w-5 md:h-6 md:w-6 text-sidebar-foreground transition-colors duration-200;
   }
   
   .sidebar-icon-active {
@@ -98,7 +98,7 @@
   }
   
   .message-bubble {
-    @apply rounded-2xl p-3 max-w-[85%] break-words;
+    @apply rounded-2xl break-words;
   }
   
   .message-bubble-sent {
@@ -123,5 +123,16 @@
 
   .glass-effect {
     @apply bg-white/90 backdrop-blur-sm border border-gray-200/50 shadow-sm;
+  }
+  
+  /* Responsive styles */
+  .section-padding {
+    @apply px-4 py-6 md:px-6 md:py-8 lg:px-8 lg:py-10;
+  }
+
+  @media (max-width: 640px) {
+    .message-bubble {
+      @apply text-sm p-2;
+    }
   }
 }
