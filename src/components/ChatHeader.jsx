@@ -3,11 +3,9 @@ import React from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useChat } from '@/contexts/ChatContext';
 import { Bell, MoreHorizontal } from 'lucide-react';
-import { useIsMobile } from '@/hooks/use-mobile';
 
 const ChatHeader = () => {
   const { currentChat } = useChat();
-  const isMobile = useIsMobile();
 
   if (!currentChat) {
     return (
@@ -40,7 +38,7 @@ const ChatHeader = () => {
       </div>
       
       <div className="flex items-center space-x-4">
-        {!isMobile && <Bell className="h-5 w-5 text-gray-500" />}
+        <Bell className="h-5 w-5 text-gray-500" />
         <MoreHorizontal className="h-5 w-5 text-gray-500" />
       </div>
     </div>
